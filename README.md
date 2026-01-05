@@ -15,39 +15,42 @@ He seguido el curso de Brad Traversy "Object Oriented PHP and MVC" y he montado 
 El problema estaba en el archivo `app/controllers/Posts.php`. Resulta que en los métodos `edit()` y `delete()` no se verificaba correctamente si el usuario que intentaba editar o borrar un post era realmente el dueño.
 
 **Lo que hice:**
-- Añadí comprobaciones para verificar que el `user_id` del post coincide con el `user_id` de la sesión actual
-- Si no coinciden, muestro un mensaje de error y redirijo al usuario
-- Lo hice tanto en el método de editar como en el de borrar
-- Puse comentarios explicando lo que hacía
+
+-   Añadí comprobaciones para verificar que el `user_id` del post coincide con el `user_id` de la sesión actual
+-   Si no coinciden, muestro un mensaje de error y redirijo al usuario
+-   Lo hice tanto en el método de editar como en el de borrar
+-   Puse comentarios explicando lo que hacía
 
 Los comentarios están en las líneas 74-89, 131-143 y 173-182 del archivo Posts.php.
 
 ## Funcionalidades
 
 La aplicación tiene:
-- Sistema de registro e inicio de sesión
-- Crear posts nuevos
-- Ver todos los posts (de todos los usuarios)
-- Editar tus propios posts (pero no los de otros)
-- Borrar tus propios posts (pero no los de otros)
-- Mensajes flash para cuando haces algo (tipo "Post creado" o "No puedes borrar esto")
+
+-   Sistema de registro e inicio de sesión
+-   Crear posts nuevos
+-   Ver todos los posts (de todos los usuarios)
+-   Editar tus propios posts (pero no los de otros)
+-   Borrar tus propios posts (pero no los de otros)
+-   Mensajes flash para cuando haces algo (tipo "Post creado" o "No puedes borrar esto")
 
 ## Tecnologías
 
-- PHP con POO (Programación Orientada a Objetos)
-- MySQL para la base de datos
-- Bootstrap 4 para que se vea decente
-- Patrón MVC (Model-View-Controller)
-- PDO para las consultas de base de datos (más seguro que mysql_query)
+-   PHP con POO (Programación Orientada a Objetos)
+-   MySQL para la base de datos
+-   Bootstrap 4 para que se vea decente
+-   Patrón MVC (Model-View-Controller)
+-   PDO para las consultas de base de datos (más seguro que mysql_query)
 
 ## Estructura
 
 El proyecto está organizado así:
-- `app/controllers/` - Los controladores (Pages, Posts, Users)
-- `app/models/` - Los modelos para la base de datos
-- `app/views/` - Las vistas HTML
-- `app/libraries/` - El core del framework (Core, Database, Controller)
-- `public/` - Lo único accesible públicamente (index.php, CSS, JS)
+
+-   `app/controllers/` - Los controladores (Pages, Posts, Users)
+-   `app/models/` - Los modelos para la base de datos
+-   `app/views/` - Las vistas HTML
+-   `app/libraries/` - El core del framework (Core, Database, Controller)
+-   `public/` - Lo único accesible públicamente (index.php, CSS, JS)
 
 ## Nota importante
 
