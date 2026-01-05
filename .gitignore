@@ -1,0 +1,11 @@
+# Archivos que no se suben a GitHub
+vendor/
+.env
+*.log
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Configuración local (no subir contraseñas)
+app/config/config.php
